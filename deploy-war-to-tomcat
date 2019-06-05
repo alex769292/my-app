@@ -10,7 +10,7 @@ node{
    stage('Deploy to Tomcat'){
       
       sshagent(['tomcat-deploy']) {
-       bat 'scp -i C:\PPK\CLOUD.pem -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.3.161:/opt/apache-tomcat-8.0.33_STAR/webapps/'
+       bat 'scp -i C:\PPK\CLOUD.pem *.war ec2-user@172.31.3.161:/opt/apache-tomcat-8.0.33_STAR/webapps/'
 }
    }
 
