@@ -6,7 +6,7 @@ node {
     // Clone repo
 	git branch: 'master', 
 	credentialsId: 'github', 
-	url: 'https://github.com/javahometech/myweb'
+	url: 'https://github.com/alex769292/my-app'
    
    }
    
@@ -26,8 +26,8 @@ node {
    }
    
    stage('deploy-dev'){
-       def tomcatDevIp = '172.31.28.172'
-	   def tomcatHome = '/opt/tomcat8/'
+       def tomcatDevIp = '172.31.3.161'
+	   def tomcatHome = '/opt/apache-tomcat-8.0.33_STAR/'
 	   def webApps = tomcatHome+'webapps/'
 	   def tomcatStart = "${tomcatHome}bin/startup.sh"
 	   def tomcatStop = "${tomcatHome}bin/shutdown.sh"
@@ -44,7 +44,7 @@ node {
 							   Job Name: ${env.JOB_NAME}
 
 Thanks,
-DevOps Team""", cc: '', from: '', replyTo: '', subject: "${env.JOB_NAME} Success", to: 'hari.kammana@gmail.com'
+DevOps Team""", cc: '', from: '', replyTo: '', subject: "${env.JOB_NAME} Success", to: 'alexandruoo@operative.com'
    
    }
 }
