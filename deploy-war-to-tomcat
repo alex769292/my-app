@@ -10,7 +10,7 @@ node{
    stage('Deploy to Tomcat'){
       
       sshagent(['tomcat-deploy']) {
-       bat 'scp -i c:/PPK/CLOUD.pem c:/PPK/x.txt.txt ec2-user@172.31.3.161:/home/ec2-user/'
+       scp -i c:/PPK/CLOUD.pem c:/PPK/x.txt.txt ec2-user@172.31.3.161:/home/ec2-user/
 }
    }
 
