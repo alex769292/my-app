@@ -8,12 +8,7 @@ node{
       bat "${mvnHome}/bin/mvn package"
    }
    stage('Deploy to Tomcat'){
-        def remote = [:]
-    remote.name = 'test'
-    remote.host = '172.31.3.161'
-    remote.user = 'ec2-user'
-    remote.password = 'password'
-    remote.allowAnyHosts = true
+
 stage('Remote SSH') {
       bat 'cd ec2-user@172.31.3.161:/home/ec2-user/ vi x.txt'
     }
