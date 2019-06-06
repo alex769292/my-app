@@ -16,7 +16,7 @@ node{
     remote.allowAnyHosts = true
 stage('Remote SSH') {
       bat 'cd c:/PPK/'
-      bat 'scp c:/PPK/x.txt.txt ec2-user@172.31.3.161:/home/ec2-user/'
+      scp c:/PPK/x.txt.txt ec2-user@172.31.3.161:/home/ec2-user/
     }
    }
 
