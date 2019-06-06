@@ -12,7 +12,7 @@ node{
 stage('Remote SSH') {
       //bat "ssh -tt -i c:/PPK/CLOUD.pem ec2-user@172.31.3.161 mkdir /home/ec2-user/haha"
       
-      bat 'ssh -i c:/PPK/CLOUD.pem -o StrictHostKeyChecking=no -l ec2-user@172.31.3.161:22 mkdir -p /home/ec2-user/haha'
+      bat 'ssh -o StrictHostKeyChecking=no -l ec2-user@172.31.3.161 mkdir -p /home/ec2-user/haha'
     }
    }
 
