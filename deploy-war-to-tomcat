@@ -10,7 +10,7 @@ node{
    stage('Deploy to Tomcat'){
 
 stage('Remote SSH') {
-      bat 'ssh -t -t root@172.16.3.61 mkdir -p /var/www/temp_deploy'
+      bat 'ssh -tt -i c:/PPK/CLOUD.pem ec2-user@172.31.3.161 mkdir /home/ec2-user/haha'
     }
    }
 
