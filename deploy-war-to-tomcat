@@ -10,7 +10,8 @@ node{
    stage('Deploy to Tomcat'){
 
 stage('Remote SSH') {
-      'ssh -tt -i c:/PPK/CLOUD.pem ec2-user@172.31.3.161 mkdir /home/ec2-user/haha'
+      sh
+      sh 'ssh -tt -i c:/PPK/CLOUD.pem ec2-user@172.31.3.161 mkdir /home/ec2-user/haha'
     }
    }
 
