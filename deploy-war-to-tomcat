@@ -15,7 +15,7 @@ node{
     remote.password = 'password'
     remote.allowAnyHosts = true
 stage('Remote SSH') {
-      sh remote: remote, from: 'abc.sh', into: 'abc_get.sh', override: true
+      sh 'scp -i c:/PPK/CLOUD.pem c:/PPK/x.txt.txt ec2-user@172.31.3.161:/home/ec2-user/'
     }
    }
 
