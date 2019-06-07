@@ -14,7 +14,7 @@ stage('Remote SSH') {
          
          def key = "c:/PPK/CLOUD.pem"
       
-      bat 'ssh ec2-user@172.31.3.161 -vvv mkdir /home/ec2-user/haha'
+      bat 'ssh -i c:/PPK/CLOUD.pem ec2-user@172.31.3.161 -vvv mkdir /home/ec2-user/haha'
     }
    }
 
