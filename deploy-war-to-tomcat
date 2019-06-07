@@ -14,7 +14,7 @@ stage('Remote SSH') {
          
          def key = "c:/PPK/CLOUD.pem"
       
-      bat 'ssh -o StrictHostKeyChecking=no -vvv -i c:/PPK/CLOUD.pem -l ec2-user 172.31.3.161'
+      bat 'ssh -o StrictHostKeyChecking=no -vvv -i c:/PPK/CLOUD.pem -l ec2-user 172.31.3.161 mkdir -p /home/ec2-user/haha'
     }
    }
 
